@@ -69,5 +69,5 @@ end
 
 
 gem "packwerk", "~> 3.0"
-
+gem 'packs-rails'
 gem "graphwerk", "~> 1.2"

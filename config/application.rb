@@ -34,6 +34,7 @@ module RailsPack
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.paths.add 'packs', glob: '**/*', eager_load: true
+    # Not necessary with the packs-rails gem
+    # config.paths.add 'packs', glob: '**/*', eager_load: true
   end
 end

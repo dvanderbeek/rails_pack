@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Post do
+RSpec.describe BlogPost do
   it 'works' do
     expect(true).to be_truthy
   end

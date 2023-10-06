@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  draw(:blogs)
+  draw(:blog)
   draw(:core)
   draw(:landing)
 end

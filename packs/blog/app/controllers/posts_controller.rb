@@ -4,10 +4,12 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+    @users_by_id = UsersByIdService.new(@posts.pluck(:user_id))
   end
 
   # GET /posts/1 or /posts/1.json
   def show
+    @users_by_id = UsersByIdService.new(@post.user_id)
   end
 
   # GET /posts/new
@@ -21,7 +23,7 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.for_user(User.first).new(post_params)
+    @post = Post.for_user(FirstUserService.call).new(post_params)
 
     respond_to do |format|
       if @post.save

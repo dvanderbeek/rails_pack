@@ -6,7 +6,7 @@
 
   <p>
     <strong>User:</strong>
-    <%= post.user_id %>
+    <%= @users_by_id.users[post.user_id]&.email %>
   </p>
 
 </div>
